@@ -4,7 +4,7 @@
         alert("Seleccione un ALbum");
         return;
     }
-
+     
     $.get("/Home/ObtenerFotos/", { idAlbum: idAlbum }, function (resultado) {
         var html = ""
         for (var indice = 0; indice < resultado.length; indice++) {
