@@ -1,0 +1,40 @@
+﻿@model  IEnumerable<AppVisorAlbum.Models.AlbumModel>
+
+<select onchange="limpiar()" id="cmbAlbum">
+    @foreach ( var album in Model)
+    {
+        <option value="@album.id"> @album.title</option>
+    }
+</select>
+ <input onclick="cargarFotos()" type="button" value="visualizar Album"/>
+ 
+<table id="tblFotos">
+    <thead>
+        <tr>
+            <td>N.</td>
+            <td>Titulo</td>
+            <td>Imagen</td>
+        </tr>
+
+    </thead>
+    <tbody id="ContenidoAlbum">
+
+
+    </tbody>
+
+</table>
+<br />
+<br />
+<br />
+
+<table>
+    <thead>
+        <tr>
+            <td width="20px">N.</td>
+            <td width="85px">Nombre</td>
+            <td width="50">Email</td>
+            <td width="100px">Comentario</td>
+        </tr>
+    </thead>
+    <tbody id="ContenidoComentario"></tbody>
+</table>
